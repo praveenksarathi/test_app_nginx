@@ -2,6 +2,8 @@ from flask import Flask, jsonify, abort, request, make_response
 
 app = Flask(__name__)
 
+print('Hello,World!')
+
 @app.errorhandler(400)
 def not_found(error):
     return make_response(jsonify( { 'error': 'Bad request' } ), 400)
